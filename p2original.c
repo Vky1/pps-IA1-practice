@@ -1,27 +1,40 @@
-#include <stdio.h>
+
+#include<stdio.h>
 int input()
 {
-	int a;
-  printf("enter a number\n");
+  int a;
+  printf("enter the value of a\n");
   scanf("%d",&a);
   return a;
 }
-int add(int a,int b)
+int cmp(int a,int b,int c)
 {
-  int sum;
-  sum=a+b;
-  return sum;
+  int large;
+  if(a>b && a>c)
+  {
+    large=a;
   }
- int output(int a,int b,int sum)
+  else if(b>c && b>a)
  {
-   printf("sum of a and b is %d+%d=%d\n",a,b,sum);
- }
- int main()
+   large=b;
+ } 
+ else
  {
-int a,b,sum;
-a=input();
-b=input();
-sum=add(a,b);
-output(a,b,sum);
-return 0;
+    large=c;
  }
+ return large;
+}
+int output(int large)
+{
+  printf("large value %d\n",large);
+}
+int main()
+{
+  int a,b,c,ans;
+  a=input();
+  b=input();
+  c=input();
+  ans=cmp(a,b,c);
+  output(ans);
+  return 0;
+}

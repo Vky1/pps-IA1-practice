@@ -1,4 +1,10 @@
- gcc -g p2final.c
+gcc -g p4original.c
+ ./a.out
+enter the value of a
+4 5 6 
+enter the value of a
+enter the value of a
+large value 6
  gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
@@ -15,23 +21,28 @@ Find the GDB manual and other documentation resources online at:
 For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
-(gdb) break main
-Breakpoint 1 at 0x810: file p2final.c, line 22.
+(gdb) b main
+Breakpoint 1 at 0x832: file p4original.c, line 34.
 (gdb) r
-Starting program: /home/runner/test4-Vky1-13/a.out 
+Starting program: /home/runner/pps-IA1-practice/a.out 
 warning: Error disabling address space randomization: Operation not permitted
-
-Breakpoint 1, main () at p2final.c:22
-22  a=input();
-(gdb) n
-enter a number
 n
-23  b=input();
+Breakpoint 1, main () at p4original.c:34
+34    a=input();
 (gdb) n
-enter a number
-24  sum=add(a,b);
+enter the value of a
+n
+35    b=input();
 (gdb) n
-25  output(a,b,sum);
+enter the value of a
+36    c=input();
 (gdb) n
-sum of a and b is 32542+32542=65084
-26  return 0;
+enter the value of a
+37    ans=cmp(a,b,c);
+(gdb) n
+38    output(ans);
+(gdb) n
+large value 32519
+39    return 0;
+(gdb) n
+40  }(gdb) n
